@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>title</key>
+    <string>EveryNotifyVibe</string>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>What this tweak does</string>
+            <key>footerText</key>
+            <string>With normal iOS 16 notification behaviour, apps such as Snapchat can vibrate for the first notification, while notifications that arrive straight after it may be delivered without another vibration. EveryNotifyVibe fixes this by forcing every enabled app notification to vibrate, including repeated and grouped notifications, so every notification gets a vibration.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>label</key>
+            <string>Enabled</string>
+            <key>defaults</key>
+            <string>com.local.everynotifyvibe.preferences</string>
+            <key>key</key>
+            <string>Enabled</string>
+            <key>default</key>
+            <true/>
+            <key>PostNotification</key>
+            <string>com.local.everynotifyvibe.preferences/ReloadPrefs</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Per-App Control</string>
+            <key>footerText</key>
+            <string>All apps are enabled by default. Open Applications to turn EveryNotifyVibe on or off for individual apps, or use Enable All / Disable All. Changes apply immediately.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSLinkCell</string>
+            <key>label</key>
+            <string>Applications</string>
+            <key>detail</key>
+            <string>ENVApplicationListController</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>footerText</key>
+            <string>Turning an app off disables EveryNotifyVibe's every-notification mode for that app. The tweak then follows iOS's own alert flag: the first alert can vibrate normally, while rapid/grouped follow-up notifications may remain silent, matching iOS 16 stock behaviour. Master Enabled off applies this stock-style behaviour to all apps.</string>
+        </dict>
+    </array>
+</dict>
+</plist>
