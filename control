@@ -1,0 +1,9 @@
+Package: com.local.everynotifyvibe
+Name: EveryNotifyVibe
+Version: 0.4.0
+Architecture: iphoneos-arm64
+Description: Forces each enabled app notification to vibrate, including repeated/grouped alerts iOS 16 may normally deliver silently. Includes master, per-app, Enable All and Disable All controls.
+Maintainer: EveryNotifyVibe
+Author: EveryNotifyVibe
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
