@@ -1,0 +1,9 @@
+Package: com.local.everynotifyvibe
+Name: EveryNotifyVibe
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Description: Adds a Taptic Engine haptic to every new or coalesced notification on iOS 15-16 rootless.
+Maintainer: EveryNotifyVibe
+Author: EveryNotifyVibe
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 15.0)
