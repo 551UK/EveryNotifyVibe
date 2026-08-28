@@ -1,0 +1,9 @@
+Package: com.local.everynotifyvibe
+Name: EveryNotifyVibe
+Version: 0.2.0
+Architecture: iphoneos-arm64
+Description: Forces a vibration when each visible notification bulletin reaches SpringBoard, including repeated/coalesced notifications.
+Maintainer: EveryNotifyVibe
+Author: EveryNotifyVibe
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 15.0)
