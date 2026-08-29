@@ -1,0 +1,17 @@
+ARCHS = arm64 arm64e
+TARGET = iphone:clang:16.5:15.0
+THEOS_PACKAGE_SCHEME = rootless
+
+include $(THEOS)/makefiles/common.mk
+
+TWEAK_NAME = EveryNotifyVibe
+EveryNotifyVibe_FILES = Tweak.xm
+EveryNotifyVibe_CFLAGS = -fobjc-arc
+EveryNotifyVibe_FRAMEWORKS = Foundation AudioToolbox CoreFoundation
+
+include $(THEOS_MAKE_PATH)/tweak.mk
+
+SUBPROJECTS += EveryNotifyVibePrefs
+include $(THEOS_MAKE_PATH)/aggregate.mk
+
+INSTALL_TARGET_PROCESSES = SpringBoard

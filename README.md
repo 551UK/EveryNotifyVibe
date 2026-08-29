@@ -1,0 +1,45 @@
+# EveryNotifyVibe 0.8.4
+
+Rootless SpringBoard tweak for iOS 15/16 (Dopamine) that forces every incoming notification from enabled apps to vibrate, including repeated/grouped notifications that iOS 16 may normally deliver silently.
+
+## Applications page
+
+- Search bar pinned at the top
+- Search by app name or bundle identifier
+- Third-party **Applications** and **System Apps** are separated
+- App icons are shown next to their switches when available
+- Section footers show enabled counts
+- Top-right **Actions** menu provides:
+  - Enable All Apps
+  - Disable All Apps
+  - Enable Applications
+  - Disable Applications
+  - Enable System Apps
+  - Disable System Apps
+- Individual app switches still apply immediately
+
+All apps are enabled by default. Disabling an app means EveryNotifyVibe does nothing to that app and stock iOS notification vibration behaviour is left untouched.
+
+## Why it exists
+
+With normal iOS 16 behaviour, apps such as Snapchat can vibrate for the first notification while rapid follow-up notifications may not vibrate again. For enabled apps, EveryNotifyVibe forces every incoming notification to vibrate.
+
+
+## Developer
+
+Made by **551**.
+
+GitHub: https://github.com/551UK
+
+## Build on GitHub
+
+1. Replace the files in your repository with this version.
+2. Run **Build rootless deb** in GitHub Actions.
+3. Download `EveryNotifyVibe-rootless-v0.8.4`.
+4. Install the `.deb` and respring.
+
+## Focus / Do Not Disturb
+
+0.8.4 tracks Focus/DND from SpringBoard's own live `DNDNotificationsService` state updates instead of querying `DNDStateService` separately. It also mirrors the current values when SpringBoard reads `DNDState.isActive` or `willSuppressInterruptions`.
+
+If any Focus mode or Do Not Disturb is active, EveryNotifyVibe makes **no forced vibration call**. Apple's normal notification handling still runs untouched.
