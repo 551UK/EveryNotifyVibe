@@ -28,6 +28,6 @@ jobs:
       - name: Upload deb
         uses: actions/upload-artifact@v4
         with:
-          name: EveryNotifyVibe-rootless-v0.8.1
+          name: EveryNotifyVibe-rootless-v0.8.2
           path: packages/*.deb
           if-no-files-found: error
